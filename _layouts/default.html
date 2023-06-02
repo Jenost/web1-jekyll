@@ -1,0 +1,19 @@
+{% include head.html %}
+<main>
+        {% for post in site.posts  %}
+        <div class="post">
+            {% if post.img != null %}
+                <img src="/img/{{post.img}}" alt="Frame" width="640px" height="620px">
+            {% endif %}
+            <a href="{{post.url}}">{{post.title}}</a>¨
+            {{post.content}}
+               
+            
+          
+        </div>
+       
+        
+    {% endfor %}
+        
+</main>
+{% include footer.html %}
